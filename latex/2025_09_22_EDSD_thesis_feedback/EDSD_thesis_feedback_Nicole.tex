@@ -1,0 +1,173 @@
+\documentclass[11pt]{article}
+\usepackage[english]{babel}
+\usepackage[top=.8in, bottom=1in, left=1.3in, right=1.3in]{geometry}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage{filecontents}
+\usepackage{verbatim}
+\usepackage{textcomp}
+\usepackage{multirow}
+\usepackage{eurosym}
+\usepackage{array}
+\usepackage[export]{adjustbox}
+\usepackage{dcolumn}
+\usepackage{array}
+\usepackage[authoryear,round]{natbib}
+\renewcommand{\bibsection}{}
+\bibliographystyle{abbrvnat}
+\usepackage{lscape}
+\usepackage{rotating}
+\makeatletter
+\newcommand{\ssymbol}[1]{^{\@fnsymbol{#1}}}
+\makeatother
+\usepackage[flushleft]{threeparttable}
+\usepackage{setspace}
+\usepackage{caption}
+\usepackage{helvet}
+\usepackage{float}
+\usepackage{subcaption} % Optional: to customize float page (e.g. remove page number)
+\usepackage{placeins}
+\usepackage[hidelinks]{hyperref}
+\usepackage{bibentry}
+\nobibliography{biblio}
+\usepackage{rotating}
+\usepackage{booktabs}
+\usepackage{makecell}
+\usepackage{titlesec}
+\usepackage{soul}
+\usepackage{xcolor}
+
+\sethlcolor{lime}
+\newcommand{\hlyes}[1]{{\sethlcolor{lime}\hl{#1}}}
+\newcommand{\hlno}[1]{{\sethlcolor{pink}\hl{#1}}}
+\newcommand{\hlmaybe}[1]{{\sethlcolor{yellow}\hl{#1}}}
+
+
+\titleformat{\section}
+{\fontsize{16}{18}\bfseries\sffamily}
+{\thesection}{1em}{}
+
+\titleformat{\subsection}
+{\fontsize{14}{18}\bfseries\sffamily}
+{\thesubsection}{1em}{}
+
+\titleformat{\subsubsection}
+{\fontsize{13}{18}\bfseries\sffamily}
+{\thesubsubsection}{1em}{}
+
+\titleformat{\subsubsubsection}
+{\fontsize{11}{18}\bfseries\sffamily\itshape}
+{\thesubsubsubsection}{1em}{}
+
+
+\title{Feedback from Nicole on EDSD project}
+\date{September 2025}
+
+\begin{document}
+	
+	\maketitle
+	
+	In this document, you'll find a summary of the feedback I got, to which I've added my impressions through highlighting and comments, using the following key:
+	
+	\noindent \hlyes{Yes please}
+	
+	\noindent \hlno{Don't like the sound of that}
+	
+	\noindent \hlmaybe{Not sure I understand}
+
+	\noindent \textbf{In bold text, comment by Alex}
+	
+	In section \ref{Moving on}, I suggest possible changes.
+	
+	
+\section{Strengths}
+
+
+\begin{itemize}
+	\item Uses two high-quality, large-scale, nationally representative cohort studies.
+	
+	\item Clear conceptualization of three parenting dimensions.
+	
+	\item Novelty: systematically documents both gender and class differences in early childhood parenting across two institutional contexts.
+	
+	\item Transparent discussion of comparability limitations and attrition.
+	
+\end{itemize}
+
+
+\section{Limitations}
+	
+\begin{itemize}
+\item Measurement comparability: The operationalization of expectations, activities, and division of labour differs substantially across datasets (e.g., ranked wishes in Elfe vs. binary “yes/no” in MCS). This weakens cross-country comparisons. \textbf{Yes.}
+
+\item Father’s role: Analyses largely rely on mothers’ reports; limits insights into fathers’ perspectives and father–child interactions. \textbf{Indeed, for this paper, with this data, fathers aren't the focus/are left out quite a bit.}
+
+\item Causal interpretation: Results are descriptive associations; the discussion sometimes implies mechanisms (e.g., “same-sex dyads”) without testing them. \textbf{Agreed. What if I cite the literature to back up these ideas of interpretation in the discussion? Does that work?}
+
+\item \hlyes{Scope of class measure: Mother’s education is a reasonable proxy, but social class is broader (income, occupation, cultural capital). The thesis would benefit from sensitivity checks.}
+
+\item \hlmaybe{Theoretical depth: While “doing gender” and Lareau’s “concerted cultivation” vs. “natural growth” are invoked, engagement with mechanisms (e.g., how institutional contexts interact with family practices) could be deepened.}
+
+\item Findings on girls’ advantage: \hlyes{The surprising result that girls get more access and exposure to family resources deserves a stronger theoretical explanation}. Could this be survey artefacts, mother-report bias, or genuine shifts in gender socialization?
+
+\end{itemize}
+
+
+\section{Questions}
+
+\begin{itemize}
+	\item Conceptual / Theoretical
+	
+	Why did you choose “doing gender” as the main theoretical lens, and how does it help explain your findings compared to \hlmaybe{alternative frameworks (e.g., gendered investment theory, social learning)}?
+	
+	How do you reconcile the surprising finding that girls seem to receive more resources, given prior literature showing parental bias toward boys?
+	
+	\item Data \& Measurement
+	
+	What are the implications of measuring “social class” only through mother’s education? Would results differ if you used income or occupation?
+	
+	Given that most parenting measures are reported by mothers, how might father-reported data change your results?
+	
+	How comparable are the Elfe and MCS measures across the three parenting dimensions? To what extent can we draw cross-country conclusions?
+	
+	\item Methods
+	
+	\hlyes{Why did you choose linear probability models over logistic regression? What are the trade-offs, and do they affect your substantive conclusions?}
+	
+	You mention using Bonferroni corrections. Did you consider the risk of over-correction and missing real effects?
+	 
+	\item Findings
+	
+	In both countries, gender differences were weaker than class differences. What does this imply for policies aiming to reduce gender inequality through early childhood interventions?
+	
+	You found no strong evidence of interaction between gender and social class. How do you interpret this—do parents reproduce gender and class inequalities in parallel rather than in intersectional ways?
+	
+	\hlyes{Could the finding that UK mothers take on more domestic/childcare work than French mothers be partly due to part-time work arrangements?}
+	
+	\item Limitations / Future Work
+	
+	\hlyes{What are the main blind spots of your study, and how would you design future research to address them?}
+	
+	\hlyes{If you could redesign the data collection in these cohort studies, what would you add or change to better capture gendered parenting?}
+	
+	
+\end{itemize}
+
+	
+	\newpage 
+	
+	\section{Moving on} \label{Moving on}
+	
+	\begin{itemize}
+		\item I'm not convinced by the comparative approach myself.
+		\item I need help with respect to interpretations, how far can I take it? Can I do it citing the literature? For example,  how can I discuss my findings on girls’ advantage for activities? Survey artefacts, mother-report bias, or genuine shifts in gender socialization? Do I put them as questions? And look into the literature to see which might be more likely?
+		\item Social class/education: figure out which one.
+		\item Look into gendered investment theory and social learning.
+	\end{itemize}
+	
+	
+\end{document}

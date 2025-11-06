@@ -1,0 +1,293 @@
+
+18 June 2025 -------------------------------------------------------------------
+
+Set up github repository
+
+Coded weights, child sex, mothers' education
+
+Problem: couldn't code maternity leave for France, I need CONGMATPAR at 2 months 
+and 1 year
+
+Elfe data restructured: what a mess for data users
+
+23 June 2025 -------------------------------------------------------------------
+
+Role modelling: coded who does chores, including with 3 categories variables:
+      
+      1 mother does it
+      2 balanced
+      3 father does it
+      
+      Matching variables in Elfe and MCS!
+      
+      Add division of labour outside the home? -> started working on this 24 
+      June
+      
+      Add age 1 variables for Elfe?
+
+Attitudes expectations: not matching, not sure how to compare MCS and Elfe
+variables...
+coded as dummy variables mostly
+
+Cleaned the variables script more, listing the variables I've created as I go
+
+Children's access to resources: MCS done pretty much, started Elfe
+
+24 June 2025 -------------------------------------------------------------------
+
+If variables available in multiple waves, which do I choose?
+
+Coded parents' employment, part-time work in Elfe
+Coding parents' reason for part-time work in Elfe (start again here)
+Missing variables for coding maternity (etc) leave in Elfe
+
+Coded children's hobbies in clubs in Elfe
+
+25 June 2025 -------------------------------------------------------------------
+
+Finished coding parents' reason for part-time work in Elfe
+
+Sent email for missing variables for coding maternity (etc) leave in Elfe
+
+Realised there might be a SLIGHT problem when I structure the MCS data:
+
+      28 mothers are partner respondents, 7 fathers are main respondents:
+      will need to fix this in clean_mcs scripts, shouldn't be an issue, but 
+      better to fix it:
+      fix by adding condition that _m needs to be ADDRES00 = 1, and _p 
+      ADDRES00 = 2
+      maybe find how to redistribute the mother partner interview as _m
+      and the father main interview as _p,
+      because right now, 28 _p's are actually mothers and 7 _m's are actually 
+      fathers
+      eg. matters when coding the DCWRK00 work variables 
+      
+30 June 2025 -------------------------------------------------------------------
+
+How do I work with family structure?
+
+      For example: for work status, whose status matters? both parents? the ones 
+      living with the child?
+      
+Coded work status of parents for MCS: I ignored the items in the questionnaire 
+for which the work status was unknown for the main parent
+MCS had a contructed variable with more options than the ELFE variable: in 
+particular MCS had options for mothers with no partner
+
+Also, coding part time work: should I keep an NA for people who don't have jobs?
+Should probably, but that would reduce the sample size... Keep an option 2 = no 
+job?
+Done
+
+1 July 2025 --------------------------------------------------------------------
+
+Spent a lot of time on maternity etc leave. Conclusion: probably should look at
+length of leave for both parents. I think in MCS it's sort of assumed that all
+mothers take leave, it's more about how long and paid how. In elfe, we have info
+on length of maternity leave at 2 months only, which is weird, it's like an idea
+of how long it'll be? But then in subsequent surveys, I can keep checking if
+they've changed plans and are still on leave.
+
+        For fathers: in MCS, it's weird how many fathers say they've been on 
+        leave gain, should I focus on length?
+        
+        I'll finish coding this variable when I have the complete elfe data
+
+For some reason, 
+> elfe[, wgt2m:= M02E_PONDREF]
+Error in eval(jsub, SDenv, parent.frame()) : 
+  object 'M02E_PONDREF' not found
+
+while the rest is fine:
+> elfe[, wgt1y:= A01E_PONDREF]
+> elfe[, wgt2y:= A02E_PONDREF]
+> elfe[, wgt3y:= A03E_PONDREF]
+> elfe[, wgt5y:= A05E_PONDREF]
+
+Started the 2_desc document to get summary statistics for both countries
+
+Need family structure as a variable: done
+
+Started coding the summary statistics
+
+Fix the MCS weights/present in waves variables
+
+2 July 2025 --------------------------------------------------------------------
+
+MCS present in waves variables: not there because I hadn't merged all of the 
+hhgrid files
+          
+          Merging data files again
+          Done
+
+Need to fix the denominator of the part-time variable for France: only a ratio
+of those working: done
+
+Brain problem just before noon
+
+Back on track: fixed the problems from before lunch, finished typing the
+summary statistics code, fixed more issues and...:
+
+Got a nice first version of summary statistics, with pvalues for boy-girl
+differences: for the most part no differences between parents of boys and girls,
+except for children's access to resources: interesting!
+
+7 July 2025 --------------------------------------------------------------------
+
+Who does what at home variables: for the most part, coded as not applicable if 
+family structure different from two parents at home
+
+Finished the bar plots and coef plots for who does what at home
+
+8 July 2025 --------------------------------------------------------------------
+
+Finished knitting properly
+
+Took care of attitudes/expectations plots
+
+Need some recoding for children's access to resources
+
+# "BPOFRE00"  "BPREOF00" freq "BPREEL00" does anyone : reading do again.   1 is bigger
+# 
+# "BPOFLI00"                  "BPTOLI00"               library ok           1 is smaller
+# 
+#                             "BPSDPA00"               physical act ok      
+# 
+# "BPOFAB00"                  "BPALPH00"               alphabet             1 is smaller
+# 
+# "BPOFCO00"                  "BPNUMB00"               counting ok          1 is smaller
+# 
+# "BPOFSO00"                  "BPSONG00"               songs ok            1 is smaller 
+#  
+# "BPPAMA00"                  "BPDRAW00"               draw.           1 is smaller
+
+9 July 2025 --------------------------------------------------------------------
+
+Fixed the children's access to resources variables. Why do many missings at age
+3 compared to age 5 in MCS? + I left out the frequencies for now: add a never 
+category then you can add them
+
+Finished the last set of plots
+
+Should explore more of the frequencies?
+
+Now need to make sense of what's going on + stratify by social class
+
+And fix the maternity leave etc variables, do a set of plots for that too?
+
+11 July 2025 -------------------------------------------------------------------
+
+Coded frequencies of children's access to resources variables in MCS to include
+a 0 category for "not at all"
+
+While coding the maternity etc leave variables, found an improvement to make to 
+employment variables
+
+Taking a break in data coding
+
+21 July 2025 -------------------------------------------------------------------
+
+Finished coding maternity etc leave, employment and part time vars for ELFE.
+
+Coding them for MCS.
+          
+          Maternity etc leave 9m: done
+          
+          UK: fathers take annual leave a lot, a way to take paternity leave?
+          for France too?
+          
+          Maternity leave 3y: contradictory info from two variables, don't know 
+          why
+          
+          Done
+          
+          Who's working variables also completed for the UK
+          
+          Need to complete the part time variables for the UK at some point
+
+Regressions with controls for leave and employment: a lot of missingness for
+leave for the UK, no missing values for employment
+          
+          Leave: imputing as 4: no one took leave
+
+22 July 2025 -------------------------------------------------------------------
+
+Finishing writing data
+
+Double checked the missing values weren't coded as 0s
+
+2 September 2025 ---------------------------------------------------------------
+
+Cleared up files and scripts
+
+Week of September 1st 2025 -----------------------------------------------------
+
+Finished EDSD thesis
+
+Week of September 8th 2025 -----------------------------------------------------
+(Friday off)
+
+CRIS doctoral workshop
+
+Meeting with Hanna
+
+Reading:
+- Gendered Parenting in Early Childhood: Subtle But Unmistakable if You Know
+Where to Look mesman_gendered_2018
+- Social–cognitive theory of gender development and differentiation 
+bussey_social_1999: need to finish note-taking
+- The Two-Part Gender Revolution, Women’s Second Shift and Changing Cohort 
+Fertility frejkaTwoPartGenderRevolution2018: need to finish note-taking
+
+Week of September 15th 2025 ----------------------------------------------------
+
+CRIS seminar: Which Gender Equality Counts? Gender Stratification versus Gender 
+Socialization Explanations of the Gender Gap in Math by Romain Delès & Michael 
+Katsillis
+
+Meeting with Lidia and Anne
+
+EDSD thesis defence preparation
+
+Week of September 22th 2025 ----------------------------------------------------
+          
+EDSD thesis defence
+
+Lundis de l'Ined: Les logiques genrées des sanctions pénales par Hugo Wajnsztok
+CRIS doctoral workshop: Sophia Noel workshop
+CRIS seminar Income segregation, spatial segregation, and income inequality in 
+Israel by Ameed Saabneh
+
+Week of September 29th 2025 ----------------------------------------------------
+
+Lundis de l'Ined: Les jeunes femmes plus à gauche que les jeunes hommes ? Le
+vote aux élections législatives de 2024 au prisme du genre et de l’âge par Anja 
+Durovic
+
+Mum's hip surgery on October 2nd: my Thursday and Friday were busy with that.
+
+Week of October 6th 2025 -------------------------------------------------------
+
+Lundis de l'Ined: L’expérience minoritaire sexuelle et de genre à l’aune du 
+statut migratoire : réflexions à partir du cas de demandeurs et demandeuses 
+LGBT+ en France par Florent Chossière
+
+Week of October 13th 2025 ------------------------------------------------------
+
+Lundis de l'Ined: Quand la division sexuée du travail est entravée : Handicap et 
+arrangements conjugaux en France par Célia Bouchet
+
+Ined welcome days on Monday and on Tuesday: met the new PhD students and all
+that. I left the welcome day on Tuesday mid morning because it was just too 
+repetitive.
+
+
+
+
+
+
+
+
+
+
+      

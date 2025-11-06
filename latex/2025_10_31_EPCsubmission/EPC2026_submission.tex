@@ -1,0 +1,568 @@
+\documentclass[11pt]{article}
+\usepackage[english]{babel}
+\usepackage[top=.8in, bottom=1in, left=1.3in, right=1.3in]{geometry}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage{filecontents}
+\usepackage{verbatim}
+\usepackage{textcomp}
+\usepackage{multirow}
+\usepackage{eurosym}
+\usepackage{array}
+\usepackage[export]{adjustbox}
+\usepackage{dcolumn}
+\usepackage{array}
+\usepackage[authoryear,round]{natbib}
+\bibliographystyle{abbrvnat}
+\usepackage{lscape}
+\usepackage{rotating}
+\makeatletter
+\newcommand{\ssymbol}[1]{^{\@fnsymbol{#1}}}
+\makeatother
+\usepackage[flushleft]{threeparttable}
+\usepackage{setspace}
+\usepackage{caption}
+\usepackage{helvet}
+\usepackage{float}
+\usepackage{subcaption} % Optional: to customize float page (e.g. remove page number)
+\usepackage{placeins}
+\usepackage[hidelinks]{hyperref}
+
+\usepackage{rotating}
+
+\usepackage{booktabs}
+\usepackage{makecell}
+
+\usepackage{titlesec}
+
+\titleformat{\section}
+{\fontsize{15}{18}\bfseries\sffamily}
+{\thesection}{1em}{}
+
+\titleformat{\subsection}
+{\fontsize{14}{18}\bfseries\sffamily}
+{\thesubsection}{1em}{}
+
+\titleformat{\subsubsection}
+{\fontsize{12}{18}\bfseries\sffamily\itshape}
+{\thesubsubsection}{1em}{}
+
+
+\begin{document}
+
+		\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+		
+		\begin{center}
+			
+			{ \Large \bfseries Social Class Gaps in Gendered Parenting Practices in the UK and in France}\\[0.1cm]
+			\HRule \\[.2cm]
+			
+		\end{center}
+			
+			\noindent
+				\begin{flushleft} \large \emph{Authors:} \\
+					Alex \textsc{Sheridan} (Sciences Po/Ined) \\
+					Nicole \textsc{Hiekel} (MPIDR) \\
+					Lidia \textsc{Panico} (Sciences Po/CNRS) \\
+					Anne \textsc{Solaz} (Ined) \\
+				\end{flushleft}
+			
+			\noindent \textbf{\textit{Abstract:}} 
+			
+			\noindent 
+			\textit{Whether parents raise boys and girls differently based on social class is underexplored in the literature. This paper asks to what extent gender differences in parenting practices and expectations in early childhood vary by social class. We implement linear regression analyses on two high-quality, large, nationally representative cohort studies, the Millennium Cohort Study for the UK, and the French Longitudinal Study of Children for France. Overall, we find few differences across social class in the gender gaps in parenting expectations and in children's access to family resources. Furthermore, mothers do more housework and childcare work than fathers irrespective of raising a boy or a girl, and this is true across social class. These findings suggest that while class shapes overall parenting, gendered patterns of parenting remain broadly consistent across social strata.}
+
+		
+		\section*{Introduction}
+		
+		In industrialised countries, girls' outperformance of boys in educational settings \citep{buchmann2008gender} often does not carry over into equivalent labour market outcomes later in life \citep{bertrand2020gender}. Research shows that this is explained by the different choices men and women make in education and on the labour market, which are partly explained by persisting gender stereotypes, as we keep associating competence with men and nurturing with women. Research also shows that stereotypes shape our actions as early as childhood. For example, psychologists find that by age 2 or 3, children already tend to play with same gender playmates, select gender-typed toys, and exhibit gender-specific behaviours \citep{paechter2007being}. This suggests that, to understand the persistence of gender stereotypes and therefore gender inequalities, we need to understand their geneses in early childhood.
+		
+		Though many actors intervene in children’s lives, parents have a front seat\footnote{Parents spend on average over six waking hours per day with children under the age of 5 \citep{bls2022parents}.}, especially in the early years when their influence peaks, before children’s worlds expand beyond the home environment, the influence of their peers and the media becoming stronger. Parents play a role in their children's construction of gender by delimiting the possibilities and experiences available to them \citep{durkheim_education_1922, lahire_enfances_2019}, by providing role models through the exposure to their own actions, and by setting expectations for them. However, parenting choices are also constrained by how much income parents can direct at their family's sustenance and at their children's development, and by how much time they can spend with their children. These resources depend, to a certain extent, on families' policy and socio-economic environment (e.g., maternity and paternity leave policies, early childhood care and education, family benefits) and on their social class.
+		
+		Research has documented how gendered the division of labour between parents still is (mothers still do more housework and spend more time caring for children \citep{sullivan2013we}), but also how parents still raise boys and girls differently (e.g., fathers spending more time with sons than daughters), in spite of many parents striving to adopt gender-neutral practices. Research also documents differences in parenting, based on social class: compared with lower-class parents, upper-middle-class parents spend more time with their children and they engage in their “concerted cultivation”, structuring their children's activities to increase their chances of educational success. These parents also tend to have less traditional views of gender roles, favouring more gender equality \citep{knight2017one}. Fewer studies have documented gendered parenting practices across social class.
+		
+		In this study, we extend theory and empirical research on gendered parenting practices across social class by unpacking parents' expectations and attitudes, their role modelling and behaviour, and children’s access and exposure to resources within families. I ask two research questions. First, is parenting gendered in France and in the United Kingdom (UK)? Second, is parenting socially stratified in France and in the UK? Third, does the gendering of parenting hinge on social strata? To answer these research questions, we use data from the Millenium Cohort Study (MCS) and from the French Longitudinal Study of Children (Elfe), two nationally representative, longitudinal cohort studies of more than 18,000 children born in the United Kingdom and in France respectively. To my knowledge, MCS and Elfe are two of the few large-scale, longitudinal studies in the world that includes information on such wide ranges of parenting practices in early childhood, as well as information on the family's socio-economic environment.
+		
+		
+		%Cross-country and longitudinal studies have also documented differences in parenting related to the level of 
+		
+		%What we do know is that differences in how girls and boys are raised are tightly linked to the incentives faced by their parents
+		
+		
+		
+		% remaining gender gaps that start as early as childhood
+		
+		% many actors, focus on parents
+		
+		%how do you define parenting: take a holistic approach
+		
+		%focus on early childhood: because parents have most importance then, and because children are most malleable then
+		
+		%focus on 3 domains
+		%gender can be done through parents doing things differently according to either parent's sex or children's sex
+		
+		%country context: differences in family policies
+		
+		%social class: annette lareau's work that shows differences in parenting across social class
+		%do we find that?
+		%and do we find more gendered practices in certain groups?
+		
+		%hypotheses:
+		%- gender can play a bigger role for some domains, esp children's access to resources
+		%- more equal distribution of chores in France
+		%- social class?
+		
+		
+		
+		\section*{Background and Conceptual Motivation}
+		
+		\subsection*{Dimensions of Parenting}
+		
+		% attitudes: literature mostly focused on academic achievement rather than other areas of life
+		% what about second gender revolution, men taking on women areas?
+		
+		“Parenting” is a vast concept that the literature tends to operationalise as specific parenting practices (e.g., reading with the child, helping with homework), or as parenting styles (such as Baumrind’s typology that classifies parents along dimensions of responsiveness and demandingness \citep{baumrind1971current}). Focusing on a wide range of survey items allows for more flexibility, especially given that parents' social context shapes their expression of parenting: their implication in their child's rearing might differ most in the shape it takes than in its intensity.
+		
+		In the transmission of gender stereotypes and attitudes, the role of parents has been studied with a focus on their own attitudes and their behaviours \citep{platt2016saying}, with the literature showing a clear decline in traditional gender attitudes \citep{inglehart2003rising, bolzendahl2004feminist}. However, the literature also shows that parents still display traditional gender roles through their division of labour, which is slow to equalise. Less explored are the resources and activities children are given access to depending on their sex, even though they could play an important role shaping children's gendered self-concepts, because different activities help foster different skills (e.g., nurturing, communication, spatial skills, problem-solving) that can set children on trajectories that reinforce self-concepts.
+		
+		% Parents' expectations and attitudes, their role modelling and behaviour, and children’s access and exposure to resources within families have been documented in the literature in relation to different child outcomes.
+		
+		% Parents' expectations and attitudes have mostly been studied in relation to children's academic achievement \citep{pinquart2020parental}, whilst exploring their role for other areas of child outcomes such as the development of socio-emotional skills--skills that help us get along with others and overcome challenges--would contribute to understanding parents' role in the second part of the gender revolution, a conception of gender equality that entails not only women’s emancipation but also the entrance of men into the domestic sphere to hold responsibility for both care and housework on equal terms with women \citep{goldscheider2015gender}.
+		
+		
+		\subsection*{Theoretical Framework}
+		
+		The “doing gender” theory \citep{west1987doing} is often called upon to explain findings that parents adopt gendered practices. This theory suggests that gender is practised through interactions and participation in activities, behaviours, and feelings that are culturally scripted as feminine or masculine.
+		
+		\subsection*{Prior Empirical Literature}
+		
+		\subsubsection*{Parents' Expectations and Attitudes}
+		
+		The literature suggests that parents tend to foster different expectations for their sons' and daughters' aptitudes, behaviours, accomplishments. Children learn the gendered rules of emotion management early: parents encourage agreeableness among girls \citep{garside2002socialization} while expecting boys to feel and express less anxiety, fear and sadness and more anger \citep{root2010gender}. Academically, parents of boys tend to believe that their child has higher maths abilities and expect their child to achieve more in maths than parents of girls \citep{yee1988parent, eccles1990gender}. This could undermine girls' confidence, reducing their likelihood of choosing and succeeding in mathematical and scientific subjects, as evidence shows that parents' educational expectations are associated with children's academic achievement, with bi-directional effects \citep{pinquart2020parental}.
+		
+		This mechanism may vary from one social class to another as higher-income families tend to have a greater college-going “habitus”, (assuming from a very young age children will go to college) and this tends to have a greater influence on girls than boys \citep{grodsky2010those}.
+		
+		\subsubsection*{Parents' Role Modelling}
+		
+		The literature shows that despite mothers' increased participation in the paid labour market, they still do more unpaid labour: they spend more time than fathers on childcare tasks, and this gap is even larger concerning traditionally feminine-associated tasks of routine housework (i.e., cleaning, clothes care and daily cooking) \citep{sullivan2013we}.
+		
+		This gendered parenting labour gap is highest for parents with less education \citep{sullivan2010changing}, potentially because higher-income mothers can buy their way out by hiring other women to take on that work instead \citep{hondagneu2001domestica}. Lower-income families are also more susceptible to not having two coresident parents, which means potentially less resources (e.g., time available, income) and a different type of role modelling, with single parents being most often single mothers.
+		
+		\subsubsection*{Children’s Access and Exposure to Family Resources}
+		
+		Research shows how parents allocate family resources (e.g., time, purchases, investments) differently depending on their child's gender. Parents spend more time with boys \citep{yeung2001children}, in particular fathers \citep{raley2006sons}, and they use this time differently: for instance, with girls, they do more activities related to cognitive development, e.g., reading and playing games \citep{baker_boy-girl_2016}. Qualitative research provides a rich description of the way parents also gender their children as they choose and give access to games, clothes, shows, décors, and extra-curricular activities \citep{cherney2006gender, pomerleau1990pink, cahill1989fashioning, mennesson2011socialisation}.
+		
+		Research shows that more privileged families often engage in ‘concerted cultivation’, directing children’s activities to foster skills that align with academic success, while lower-income families may adopt a more hands-off ‘natural growth’ approach \citep{lareau2003unequal}. More recent evidence (and for other contexts than the US) on these class differences is essential given the rising stakes around higher education that encourage parents to adapt their strategies to help their children succeed \citep{doepke2019love}.
+		
+		\subsection*{Institution Settings in France and in the UK}
+		
+		France and the UK are comparable in many ways, as two Western Europeans countries with high levels of development and advanced capitalist economies, and developed welfare systems. However, France, as a social-democratic country, has higher female employment thanks to facilitated child care (public school is universally available from age 3, with near total take-up rates), while the UK, as a liberal country, relies more on part-time female employment as child care provision is more costly and limited \citep{esping1990three}. This difference may impact parents' division of labour with mothers in the UK taking on more housework and child care than in France, but also parents' expectations of gender roles and gendered concepts. Parents might rear boys and girls differently in preparation for different economic realities, with more emphasis on girls' nurturing skills in the UK.
+		
+		\subsection*{The Current Study}
+		
+		I examine parents' expectations and attitudes, their role modelling and behaviour, and children’s access and exposure to family resources up till age 5 because life course models suggest that exposure to risk factors in early life have deeper consequences for later development, often accumulating over time and across exposures \citep{heckman2006skill, almond2018childhood}. I explore their association with child sex and with social class (proxied by mother's education) in France and in the UK, shedding light on potential differences in gendering processes across social strata. Though the two national datasets we use in my study don't include directly comparable items for all three parenting dimensions, including both France and the UK in this study provides some clues as to the importance of the institutional setting in shaping parents' experiences of parenting.
+		
+		\section*{Data}
+		
+		\subsection*{Data and Analytic Samples}
+		
+		This study uses data from two longitudinal, nationally representative cohort studies of children born in the UK and in France.
+		
+		For France, we use data from the French Longitudinal Study of Children (Elfe), following more than 18,000 French children from the time of their birth, in 2011, forward (Charles et al. 2020). Children were born at a random sample of 341 maternity units throughout continental France and were sampled at four intervals with initial data collection April 1–4, 2011, followed by June 27–July 4, 2011; September 27–October 4, 2011; and November 28–December 5, 2011. Notably, disadvantaged families were disproportionately lost to follow-up and are therefore underrepresented in our analysis sample compared with the initial Elfe sample (Thierry et al. 2018). Compared with families in the initial Elfe sample, those in our analysis sample had higher levels of maternal education, maternal employment, and family income; they were also more likely to have a native French mother and less likely to be headed by a single mother.
+		
+		This study uses data from the first, second, third, fourth and fifth waves of Elfe when children were 2 months old, 1, 2, 3.5 and 5.5 years old, respectively. I restricted the sample to children still present in the survey at age 5 and whose mother's education level isn't missing (missing for 3 children), resulting in an analysis sample of 11,214 families, of which 10,957 had nonmissing expectations and attitudes data, 8,866 had nonmissing role modelling data, and 10,593 had nonmissing children's access to resources data. I allow the sample to vary across outcomes.
+		
+		For the UK, we use data from the Millennium Cohort Study (MCS). Its sample was drawn from Child Benefit records, the uptake of which is nearly universal (HM Revenue and Customs 2010). The sampling frame is children born between September 2000 and August 2001 in England and Wales and between November 2000 and January 2002 in Scotland and Northern Ireland (Plewis et al. 2007). Disadvantaged and minority families were oversampled by stratifying by the child poverty index and the proportion of ethnic minority population of each local electoral ward. Northern Ireland, Scotland, and Wales were also oversampled relative to England. The initial sample of MCS included 18,818 focal children from 18,552 families. An additional 699 children from 692 families were added at Wave 2. The total sample size is 19,517 children from 19,244 families. 
+		
+		This study uses data from the first, second, and third waves of MCS when children were 9 months old, 3 and 5 years old, respectively. I restricted the analytic sample to families whose child's sex we know (this variable is missing for 711 children). I further restricted the sample to children still present in the survey at the third wave (age 5) and whose mother's education level isn't missing (missing for 529 children). This results in an analysis sample of 14,133 families, of which 12,571 had nonmissing expectations and attitudes data, 8,692 had nonmissing role modelling data, and 12,641 had nonmissing children's access to resources data. we allow the sample to vary across outcomes.
+		
+		\subsection*{Measures}
+		
+		\subsubsection*{Parents' Expectations and Attitudes}
+		
+		In Elfe, to capture parents' expectations and attitudes, we use the questions about what mothers wished the most for their child when they were 2 months old. Mothers could pick the three most important things from the following: “social success”, “a good love life”, “an interesting job”, “passionate leisure activities”, “a calm life”, “a big family”, “a lot of friends”, “a fairer world”, “good health”. Their three wishes were ranked from the most important to the least. I coded each of the items in the list above into binary variables (0 = mothers didn't choose this item among the three most important wishes for their child, 1 = they chose this item among the three most important wishes for their child).
+		
+		In MCS, we use questions from the wave at age 3. Mothers were asked which of the following values they would like to instil in their child: “obedience and respect for authority”, “the art of negotiation”, “respect for elders”, “doing well at school”, “religious values”, “independence”. I coded each of the items in the list above into binary variables (0 = mothers didn't wish to instil this value, 1 = they wished to instil this value).
+		Mothers were also asked which three qualities they would pick as the most important for their child to learn to prepare him/her for life, among the following: “to be well liked or popular”, “to think for himself or herself”, “to think for himself or herself”, “to work hard”, “to help others when they need help”, “to obey his or her parents”, “to learn religious values”. Their three choices were ranked from the most important to the least. I coded each of the items in the list above into binary variables (0 = mothers didn't choose this item among the three most important qualities for their child, 1 = they chose this item among the three most important qualities for their child).
+		
+		\subsubsection*{Parents' Role Modelling}
+		
+		To capture parents' role modelling, we focus on their division of labour at home (while controlling for employment, maternity/paternity leave, and family structure in analyses), both in terms of taking care of their child and in terms of house work. The following tasks were asked about in both MCS and Elfe: cleaning the house, doing the laundry, preparing meals, doing repairs, taking their child to the doctor, changing their nappies, getting up during the night.
+		
+		In Elfe, when their child was 2 months old\footnote{Parents were asked the same questions at Wave 3 (age 2); however, we focus on Wave 1 (2 months) to increase comparability with the MCS questions, asked at the age 9 months wave.}, for each of the tasks above, both mothers and fathers were asked who was most responsible for them during the week: “always them”, “most often them”, “them and their partner”, “most often their partner”, “always their partner”, “always or most often someone else”. I reversed the coding for fathers, and reduced the number of categories to three: 1 = most responsibility for mothers, 2 = balanced responsibility, 3 = most responsibility for fathers. For the minority of parents who said someone other than them was responsible, we coded the task variable as missing. If parents gave mismatched answers (for example, if both parents said they were most responsible for a task), we gave priority to mothers' answers.
+		
+		In MCS, when their child was 9 months, only mothers with a full-time resident spouse or partner were asked about who was most responsible for each task. They could answer among: “I do most of it”, “my husband does most of it”, “we share more or less equally”, “someone else does it”. I coded “someone else does it” as missing, and used the same order as for Elfe: 1 = most responsibility for mothers, 2 = balanced responsibility, 3 = most responsibility for fathers.
+		
+		\subsubsection*{Children’s Access and Exposure to Family Resources}
+		
+		In Elfe, when their child was three years old, main respondents (mothers for the most part) were asked about the activities they or their partner did with their child, such as painting/drawing/colouring, telling them a story, doing a puzzle, singing with them/get them to listen to music, getting them to remember parts of story books, and to practice writing, counting, learning the alphabet. They were also asked whether their child had any extra-curricular activities (often with other children outside of school hours), and if so, which ones: swimming, gymnastics, circus, sports initiation, music/singing classes, dance classes, art classes, horse riding, other. For each of the above, we coded binary variables (0 = the child didn't do that activity, 1 = the child did that activity). 
+		
+		In MCS, when their child is 3 and 5 years old, parents were asked what activities they or someone at home did with their child and how often. At age 3, mothers were asked about reading (“every day”, “several times a week, once or twice a week”, “once or twice a month”, “less often”, “not at all), going to the library (“on special occasions”, “once a month”, “once a fortnight”, “once a week”), learning the alphabet, counting, teaching songs/rhymes/poems, paint/draw, (“occasionally or less than once a week”, “1–2 days per week”, “3 times a week”, “4 times a week”, “5 times a week”, “6 times a week”, “7 times a week/constantly”). They were also asked about whether they learn a sport/dance/physical activity with their child, but not how often. At age 5, both parents were asked how often they read to their child, tell them stories (not from a book), play music/listen to music/sing songs or rhymes/dance with them, draw/paint/make things with them, play sports or physically active games outdoors or indoors with them, play with toys or games indoors with them, take them to the park/outdoor playground. They could select among: “every day”, “several times a week”, “once or twice a week”, “once or twice a month”, “less often”, “not at all”. For each of the MCS items, we coded binary variables (0 = the child didn't do that activity, 1 = the child did that activity).
+		
+		
+		\subsubsection*{Social Class}
+		
+		I use mothers' education level as a proxy for social class because of its relative stability over time. Education shapes many domains of life, including income level, occupation, families' social environment, access to information for parents, and tastes and values. I focus on the mother's because they get custody most often in case of separation. For both France and the UK, we create categories with three levels: 1 = low, 2 = medium, 3 = high. In France, an education level is classified as low when mothers have their \textit{baccalauréat} (end of secondary education diploma, taken around 18) or less; high education corresponds to more than two years of higher education, and medium education corresponds what's between these. In the UK, low corresponds to General Certificates of Secondary Education (GCSEs, taken around age 16) or less, medium to trade apprenticeships and A-levels (taken around age 18), high to degrees. I allow the thresholds to vary across both countries to have more similar distributions across the three categories for both countries.
+		
+		\subsubsection*{Covariates}
+		
+		For both countries, we include measures for parents' work status, maternity/paternity leave, and family structure because they can be related both to the outcomes variables and to education level, and thus could introduce an omitted variable bias. I include information on these three variables from the baseline wave, Wave 1: 2 months for France, 9 months for the UK. For the work status variable, we construct a four-level variable: 1 = both parents have paid work outside the home at the earliest wave; 2 = only the father has paid work; 3 = only the mother has paid working; 4 = neither parent has paid work. For the maternity/paternity leave variable, we construct a four-level variable: 1 = both parents have taken maternity/paternity/parental leave, or say they plan to; 2 = only the father has taken paternity/parental leave or plans to, the mother hasn't; 3 = only the mother has taken maternity/parental leave, the father hasn't; 4 = neither parent has taken maternity/paternity/parental leave nor plans to. Finally, the family structure variable is binary. It takes the value of 1 if the child is living with two parents, 0 otherwise.
+		
+		\begin{table}[!ht]
+			\centering
+			\caption{Distribution of mother's education and covariates at baseline using the imputed weighted sample: Percentages}
+			\label{tab:table1}
+			\begin{tabular}{lcc}
+				\hline
+				\textbf{Variable} 
+				& \makecell{\textbf{France} \\ N = 11,214} 
+				& \makecell{\textbf{UK} \\ N = 14,133} \\
+				\hline
+				% \multicolumn{3}{l}{\textit{Mother's education (detailed)}} \\
+				% $\leq$ BEPC         & 9.9  & --  \\
+				% CAP-BEP           & 19.8 & --  \\
+				% Bac             & 19.0 & --  \\
+				% Bac+2            & 18.8 & --  \\
+				% Bac+3/4           & 15.7 & --  \\
+				% $>$ Bac+4          & 16.9 & --  \\
+				% None            & --  & 12.5 \\
+				% Other            & --  & 2.4 \\
+				% GCSE D-G          & --  & 8.3 \\
+				% GCSE A-C          & --  & 29.4 \\
+				% Trade            & --  & 0.7 \\
+				% A-level           & --  & 14.3 \\
+				% HE below deg        & --  & 9.5 \\
+				% Bachelor's degree      & --  & 19.4 \\
+				% Higher degree        & --  & 3.5 \\
+				\multicolumn{3}{l}{\textit{Mother's education}} \\
+				Low             & 48.7 & 51.4 \\
+				Medium           & 18.8 & 25.7 \\
+				High            & 32.6 & 22.8 \\
+				\multicolumn{3}{l}{\textit{Parents' work status}} \\
+				Both parents        & 67.2 & 44.6 \\
+				Father only         & 23.3 & 32.1 \\
+				Mother only         & 4.9  & 5.7 \\
+				Neither           & 4.6  & 17.6 \\
+				\multicolumn{3}{l}{\textit{M/paternity leave uptake}} \\
+				Both parents        & 69.0 & 31.8 \\
+				Father only         & 2.1  & 10.5 \\
+				Mother only         & 26.3 & 21.6 \\
+				Neither           & 2.6  & 36.0 \\
+				\multicolumn{3}{l}{\textit{Two parents}} \\
+				Yes             & 94.4 & 84.6 \\
+				\hline
+				\multicolumn{3}{l}{\footnotesize $^1$ Baseline is 2 months old for France, and 9 months old for the UK} \\
+			\end{tabular}
+		\end{table}
+		
+		\subsection*{Attrition, Missing Data, and Imputation}
+		
+		In MCS, mothers who attrited at or before Wave 5 were, on average, more disadvantaged, were younger, and held jobs that required longer working hours \citep{mostafa2015mcs}. In France too, attrition appeared to occur disproportionately among more disadvantaged and residentially mobile families \citep{thierry2018elfe}. To address the potential bias introduced by this systematic attrition, all models use sampling weights.
+		
+		When values were missing for covariates, given that we could not assume that the data are missing completely at random, we completed the sample of participating respondents by imputing the value most typical by education level. For example, in both countries, families with high education are most likely to have two working parents; therefore, when families with high education had a missing value for parents' work status, we imputed 1 = both parents have paid work outside the home at the earliest wave.
+		
+		\begin{table}[!ht]
+			\centering
+			\caption{Cross-tabulation of covariates at baseline with mother's education before imputation using the weighted sample: Percentages}
+			\label{tab:crosstabbeforeimp}
+			\renewcommand{\arraystretch}{1.2}
+			\resizebox{\textwidth}{!}{
+				\begin{tabular}{lcccccc}
+					\hline
+					& \multicolumn{3}{c}{\textbf{France}} & \multicolumn{3}{c}{\textbf{UK}} \\
+					\cline{2-7}
+					\addlinespace
+					\textbf{Variable} 
+					& \makecell{\textbf{Low}\\N = 3616} & \makecell{\textbf{Medium}\\N = 2671} & \makecell{\textbf{High}\\N = 4927} 
+					& \makecell{\textbf{Low}\\N = 7384} & \makecell{\textbf{Medium}\\N = 3670} & \makecell{\textbf{High}\\N = 3079} \\
+					\hline
+					\multicolumn{7}{l}{\textit{Parents' work status}} \\
+					Both parents & 51.1 & 76.6 & 80.3 & 31.5 & 51.4 & 66.5 \\
+					Father only & 34.5 & 16.9 & 14.2 & 35.6 & 30.2 & 26.3 \\
+					Mother only & 6.1 & 4.4 & 4.1 & 5.7 & 7.1 & 4.2 \\
+					Neither   & 8.3 & 2.1 & 1.4 & 27.2 & 11.3 & 3.0 \\
+					\multicolumn{7}{l}{\textit{M/paternity leave uptake}} \\
+					Both parents & 61.1 & 75.3 & 75.0 & 23.3 & 35.0 & 43.3 \\
+					Father only & 2.8 & 1.2 & 1.9 & 15.0 & 13.1 & 13.6 \\
+					Mother only & 32.1 & 22.3 & 21.8 & 25.6 & 31.8 & 31.8 \\
+					Neither   & 4.0 & 1.2 & 1.4 & 36.1 & 20.2 & 11.4 \\
+					\multicolumn{7}{l}{\textit{Two parents}} \\
+					Yes     & 90.8 & 97.3 & 97.8 & 77.9 & 88.0 & 96.2 \\
+					\hline
+					\multicolumn{7}{l}{\footnotesize $^1$ Baseline is 2 months old for France, and 9 months old for the UK} \\
+				\end{tabular}
+			}
+		\end{table}
+		
+		As Table \ref{tab:crosstabbeforeimp} shows, in France at Wave 1, all education groups are most likely to have two working parents, two parents who've taken maternity/paternity leave, and to have two cohabiting parents. I therefore impute those values to families with missing values for any of these three covariates. In the UK, the pattern is the same for high and medium education groups, but, while low education groups are also most to have two cohabiting parents, they're most likely to most likely to have a working father only, and to have neither parent taking maternity/paternity leave. Table \ref{tab:table1} shows the distribution of covariates and of mother's education at baseline (2 months for France, 9 months for the UK) after imputation\footnote{Table \ref{tab:table1beforeimp} shows the distribution of covariates at baseline before imputation.}.
+		
+		\section*{Analytical Approach}
+		
+		I describe the distribution of variables in each parenting domain, and we use a univariate linear modelling approach to estimate their association with child sex (Model 1, M1) in answer to the first research question. To answer the second research question, we use a stepwise approach: we add mother's education to M1 (M2), then we interact sex and mother's education (M3), and control for covariates (M4). To reduce the possibility of Type 1 error resulting from multiple tests, we employ a Bonferroni correction.
+		
+		For binary outcomes (those capturing expectations and attitudes, and children's access to resources), we use linear probability modelling (LPM, i.e. linear regression with a binary outcome) rather than logistic or probit modelling. Though LPM, compared to logistic and probit modelling, doesn't capture nonlinearity (i.e. smaller increments in the probability of the outcome at the extreme ends of the distribution of the independent variables), it has the advantage of making comparisons of coefficients across models and samples possible \citep{mood2010logistic}. Except in cases of strong non-linearity, LPM and logit/probit modelling bear mostly identical results.
+		
+		\begin{figure}[p]
+			\centering
+			\caption{Distribution of mothers' expectations and attitudes variables and their unadjusted association with child sex (Model 1 estimates)}
+			\vspace{-3mm}
+			\noindent\includegraphics[width=.8\textwidth]{/Users/alexsheridan/Documents/Work/PhD/latex/figures/model1a.png}
+			\label{fig:model1a}
+			
+			\caption{Unadjusted association of mothers' expectations and attitudes variables with child sex and mother's education (Model 2 estimates)}
+			\vspace{-3mm}
+			\noindent\includegraphics[width=.8\textwidth]{/Users/alexsheridan/Documents/Work/PhD/latex/figures/model2a.png}
+			\label{fig:model2a}
+		\end{figure}
+		
+		\begin{figure}[p]
+			\caption{Adjusted predicted values for mothers' expectations and attitudes variables, by mother's education and child sex (Model 4 estimates)}
+			\vspace{-3mm}
+			\noindent\includegraphics[width=\textwidth]{/Users/alexsheridan/Documents/Work/PhD/latex/figures/model4a.png}
+			\label{fig:model4a}
+		\end{figure}
+		
+		In the main text, we present results graphically; full regression tables for all models can be found on the Online Appendix\footnote{Run \texttt{\detokenize{shiny::runGitHub("EDSD_project", "alextranslatus", subdir = "app")}} on R.}. Because results for Model 3 and 4 are very similar, we only present Model 4 in the main text. Model 3 figures are in the Appendix (Figures \ref{fig:model3a}-\ref{fig:model3c}).
+		
+		
+		\section*{Findings} 
+		
+		\subsection*{Parents' Expectations and Attitudes}
+		
+		\subsubsection*{France}
+		
+		For France, Figure \ref{fig:model1a}a shows that mothers are overwhelmingly concerned with their child being in good health. Indeed, over 90\% of mothers report hoping this for they child. The next most important wishes they express is for their child to have an interesting job (for 44.5\% of mothers), to be successful socially (for 36.6\% of mothers) and to have a good love life (for 36.4\% of mothers), therefore covering domains of life inside the home and outside the home, from work to building relationships.
+		
+		Figure \ref{fig:model1a}b shows estimates for the association with child sex from Model 1. We see that while mothers of boys and mothers of girls equally hope their child will be in good health, mothers of boys wish more for an interesting job and social success, while mothers of girls wish more for a good love life and a fairer world (all of these differences are around 2 percentage points and statistically different).
+		
+		Of child sex and mother's education, the latter is more strongly associated with mothers' wishes for their child 
+		(Figure \ref{fig:model2a}). Mothers with more education wish for their child to have lots of friends, a good love life and passionate leisure activities, while mothers with less education are more interested in a calm life, social success and an interesting job for their child.
+		
+		Figure \ref{fig:model3a} shows predicted values for mothers’ expectations and attitudes variables, by mother’s education and child sex. For the most part, it shows that gender differences (and non-differences) are the same across education groups, except for mothers with less education who wish more for a good love life and for a fairer world for girls than for boys, and for mothers with medium education who wish more for a calm life for girls than for boys.
+		
+		\subsubsection*{UK}
+		
+		In the UK, from Figure \ref{fig:model1a}a, we see that practically all mothers (over 90\%) said they wanted to instil obedience and respect for authority, the art of negotiation, respect for elders, doing well at school and independence. This is probably because of survey design: mothers didn't have to rank these items, they could just say yes or no for all of the items. Therefore, we don't know which of these fairly consensual items mothers really find important. Only instilling religious values was asked about using this question structure and had fewer mothers willing to acquiesce to (49\%). Among the items mothers had to pick only three from, the two most equally important were helping others when they need help (79.8\%) and thinking for himself or herself (79.6\%), followed by working hard (65.9\%). Social success (being well liked) comes last (19.5\%) with learning religious values (9\%).
+		
+		\begin{figure}[p]
+			\centering
+			\caption{Distribution of parents' role modelling variables and their unadjusted association with child sex (Model 1 estimates)}
+			\vspace{-3mm}
+			\noindent\includegraphics[width=\textwidth]{/Users/alexsheridan/Documents/Work/PhD/latex/figures/model1b.png}
+			\label{fig:model1b}
+			
+			\hfill
+			
+			\caption{Unadjusted association of parents' role modelling variables with child sex and mother's education (Model 2 estimates)}
+			\vspace{-3mm}
+			\noindent\includegraphics[width=\textwidth]{/Users/alexsheridan/Documents/Work/PhD/latex/figures/model2b.png}
+			\label{fig:model2b}
+			
+		\end{figure}
+		
+		
+		\begin{figure}[p]
+			\caption{Adjusted predicted values for parents' role modelling variables, by mother's education and child sex (Model 4 estimates)}
+			\vspace{-3mm}
+			\noindent\includegraphics[width=\textwidth]{/Users/alexsheridan/Documents/Work/PhD/latex/figures/model4b.png}
+			\label{fig:model4b}
+			
+		\end{figure}
+		
+		Figure \ref{fig:model1a}b shows that for the most part, mothers of boys and mothers of girls report similar wishes, except for learning religious values (more important to mothers of girls), and for being well liked (more important to mothers of boys).
+		
+		Similarly to France, differences by education are stronger than differences by child sex (Figure \ref{fig:model2a}). Mothers with less education rank obeying parents higher than mothers with more education, while the opposite is true for learning religious values, thinking for himself/herself, helping others, learning the art of negotiation, being well liked, and being independent.
+		
+		From Figure \ref{fig:model4a}, we see that gender differences (and non-differences) are the same across education groups, except for instilling religious values, which mothers with medium education find more important for girls than for boys, while mothers with less and more education find it equally important for boys and girls.
+		
+		
+		\subsection*{Parents' Role Modelling}
+		
+		In both France and the UK, mothers do most of the labour in the home (Figure \ref{fig:model1b}a). They're most responsible for six out of the seven type of tasks included in my analysis. In terms of house chores, mothers are most responsible for doing the laundry (for 82.7\% of children in France, 83.1\% in the UK), for cleaning the house (60.2\% in France, 75.7\% in the UK), for preparing meals (57.9\% in France, 66\% in the UK); in terms of child care, they're most responsible for changing their child's nappies (76.1\% in France, 72.5\% in the UK), for getting up during the night (73.2\% in France, 64.7\% in the UK), and for taking them to the doctor (for 62.2\% of children in France, 60.1\% in the UK). The only task they're not much responsible for is making repairs around the house, which fathers take care of the most (81.9\% in France, 66.1\% in the UK).
+		
+		As Figure \ref{fig:model1b} shows, who does the labour at home is gendered by parent sex rather than by child sex. Parents share house work and child care in the same way, irrespective of having a boy or a girl. The only exception is changing nappies: fathers do more when they have boys in the UK. These findings are in line with the literature that shows a higher investment of fathers with sons than with daughters, but less so in the early years \citep{}. 
+		
+		In line with the literature, fathers also take on more responsibility when mothers have a higher level of education, compared to when mothers have a lower level of education (Figure \ref{fig:model2b}b). In France, in families with more education, fathers do house work more (doing the laundry, cleaning the house, preparing meals). However, the pattern is reversed for taking their child to the doctor: when mothers have a lower level of education, fathers take their child to the doctor more. In the UK, when mothers have a higher level of education, fathers get more involved in child care (changing nappies and getting up at night) and in house work (doing the laundry and preparing meals.
+		
+		Finally, Figure \ref{fig:model4b} shows that all education groups share house work and child care in the same way, regardless of their child's sex.
+		
+		\subsection*{Children’s Access and Exposure to Family Resources}
+		
+		\subsubsection*{France}
+		
+		Figure \ref{fig:model1c}a shows that in nearly all families, when children were 3 years old, someone sang with the child or got them to listen to music (98\%), read them a story (97.4\%), painted, drew or coloured with them (97.2\%), and counted with them (92.9\%). In 83.4\% of families, someone did a puzzle with them. In some families, there was more focus on literacy, with someone who got them to remember parts of story books (52\%) or to practice writing (37.4\%). Finally, 17\% of children had extra-curricular activities. Gymnastics was the most popular activity (taken up by 6\% of all children), followed by sports initiation (2.5\%), swimming (2.1\%), dancing (1.9\%), music (1.7\%), horse riding (1.2\%), arts (0.4\%), and circus (0.3\%).
+		
+		\begin{figure}[p]
+			\centering
+			\caption{Distribution of children’s access and exposure to family resources variables and their unadjusted association with child sex (Model 1 estimates)}
+			\vspace{-3mm}
+			\noindent\includegraphics[width=\textwidth]{/Users/alexsheridan/Documents/Work/PhD/latex/figures/model1c.png}
+			\label{fig:model1c}
+		\end{figure}
+		
+		\begin{figure}[p]
+			\caption{Unadjusted association of children’s access and exposure to family resources variables with child sex and mother's education (Model 2 estimates)}
+			\vspace{-3mm}
+			\noindent\includegraphics[width=\textwidth]{/Users/alexsheridan/Documents/Work/PhD/latex/figures/model2c.png}
+			\label{fig:model2c}
+		\end{figure}
+		
+		\begin{figure}[p]
+			\caption{Adjusted predicted values for children’s access and exposure to family resources variables, by mother's education and child sex (Model 4 estimates)}
+			\vspace{-3mm}
+			\noindent\includegraphics[width=\textwidth]{/Users/alexsheridan/Documents/Work/PhD/latex/figures/model4c.png}
+			\label{fig:model4c}
+		\end{figure}
+		
+		The bigger differences of activity uptake by child sex seem to happen at home (Figure \ref{fig:model1c}b). Girls did all of the activities more than boys, except for practising counting. In terms of extracurricular activities, girls did more horse riding, dancing, and gymnastics, while boys did more sports initiation.
+		
+		When mothers have a higher level of education, activity uptake increases (Figure \ref{fig:model2c}b), both in the home and outside (except for horse riding and arts). Interestingly, the only activities done equally across families were writing and counting.
+		
+		Figure \ref{fig:model4c} suggests that gaps in uptake of extracurricular activities by child sex are wider in high and medium education families (having any extracurricular activity, dancing, gymnastics, horse riding, sports initiation), while gaps in uptake of activities at home by child sex are wider in low education families (painting/drawing/colouring, singing/listening to music, remembering parts of story books). Writing has similar gaps in all education groups, with girls practising more than boys irrespective of education group.
+		
+		\subsubsection*{UK}
+		
+		Figure \ref{fig:model1c}a shows that, similarly to France, most families do the activities asked about in the survey with their child when they're 3 and 5 years old: reading (99.1\% age 3, 98.8\% age 5), playing indoors (97.9\% age 5), teaching songs/rhymes/poems (95.4\% age 3, 97.7\% age 5), drawing/painting/making things (97.5\% age 3, 96.4\% age 5), taking them to the park/outdoor playground (97\% age 5), counting (96.1\% age 3). At age 5, 91.8\% played sports or physically active games outdoors or indoors with them, and 87.9\% told them stories not from a book. At age 3, 80.7\% got them to practice the alphabet, 79\% played sports or physically active games outdoors or indoors with them, and 42.7\% took them to the library.
+		
+		Comparing Elfe and MCS, there seems to be fewer differences by child sex in the UK than in France, but they are still present (Figure \ref{fig:model1c}b): girls were more exposed to songs and to stories, they painted and drew more, and they practised the alphabet more often than boys. On the other hand, boys played physically more often with their parents. The gaps are the widest for the two latter items.
+		
+		In MCS, children do activities more often in families with more education (Figure \ref{fig:model2c}b). Going to the library with their child particularly depends on mother's education, while education gaps are smaller for other activities. Only counting and practising the alphabet are done as much across education groups.
+		
+		Figure \ref{fig:model4c} suggests that, in the UK, child gender gaps in children's activities are widest in the lower education group, specifically for painting/drawing and singing songs (which girls do more of), and for playing physically (which boys do more of).
+		
+		\section*{Discussion}
+		
+		In this study, we document differences in parenting by gender and social class, and more specifically exploring whether gender differences in parenting hinge on social class, which, to my knowledge, has been little explored with nationally representative data in the literature. I addressed this gap by taking advantage of the British Millennium Cohort Study and of the French Longitudinal Study of Children, two of the few longitudinal data sets in the world to include detailed measures of different domains of parenting: parents' expectations and attitudes, their role modelling and behaviour, and children’s access and exposure to family resources. I examine how these measures of parenting vary by child gender, by social class, and by the interaction of the two, using a linear modelling approach.
+		
+		In both France and the UK, my results suggest that parents still perform gender through their division of labour in the home, with mothers taking more responsibility for most tasks related to child care and to house work (doing the laundry, cleaning the house, preparing meals, changing their child's nappies, getting up during the night, taking them to the doctor). They also suggest that, to some extent, parents of boys and parents of girls wish for different things for their children, and that parents of girls engage more in their child's activities than parents of boys.
+		
+		In France, parents of girls hope for a fairer world and a good love life more than parents of boys. This difference might be due to an awareness of girls/women being at higher risk of suffering violence inflicted by men and of earning less than boys/men. Meanwhile, parents of boys place more importance on social success and on an interesting job, showing a higher interest for their lives outside the home. Parents of girls do more activities with them and provide more extra-curricular activities than parents of boys. The only activity parents of boys do more is sports initiation. My results suggest more involvement with girls, which contradicts some findings in the literature that shows that parents spend more time with boys \citep{baker_boy-girl_2016}. This discrepancy might be due mothers being the main respondent in Elfe. Indeed, the literature shows more involvement of fathers with boys. This doesn't explain why we find more involvement with girls, but my results might suggest a pattern of higher involvement in same-sex dyads.
+		
+		In the UK, parents of boys give more importance to their child being well-liked, mirroring results for France, while parents of girls hope to instil religious values in them. In terms of activities, girls learn the alphabet with their parents more, and boys do more physical exercise with their parents, both of which align with the literature. All in all, in spite of the decreasing prevalence of traditional gender values observed in the literature \citep{inglehart2003rising, bolzendahl2004feminist}, my results suggest that parents still adopt differences practices when they have boys or girls, and mothers still do more of the labour in the home.
+		
+		However, my results show that the biggest differences in parents' expectations and attitudes and in the activities parents do with their children hinge on parents' education rather than on gender, both in terms of coefficient magnitude and in statistical significance. Parents' education also matters for division of labour, with a more equal division in more educated families. This might be because parents with higher levels of education have more time to spend with their children, possibly by outsourcing tasks that could keep them from their children (e.g., shopping, cleaning), so that they can spend more quality time with their children. On the other hand, we don't think these differences are related to differences in income and financial resources, given that the activities we include in this study shouldn't be too costly to implement (e.g., physical play, singing songs, painting, listening to music). There might be a bigger role played by preferences and by different expectations of what parenting looks like across social groups, in line with \cite{lareau2003unequal}'s description of natural growth versus concerted cultivation.
+		
+		Two activities depart from this education gradient in my results: parents tend to get their children to count and write/learn the alphabet equally across education levels in both France and in the UK. I interpret this as an understanding of all families of the importance of developing their child's school-readiness skills.
+		
+		Overall, I find few differences in gendered parenting across education levels, especially in terms of division of labour: all couples share labour in the same way (mothers doing more) regardless of being parents of boys or girls and regardless of education level. In terms of expectations, a few exceptions are: in France, mothers with less education wish more for a good love life and for a fairer world for girls than for boys, and mothers with medium education wish more for a calm life for girls than for boys. In the UK, mothers with medium education find instilling religious values more important for girls than for boys, while mothers with less and more education find it equally important for boys and girls. In terms of children's activities, there are few differences but I notice a pattern in France: gaps in uptake of extracurricular activities by child sex are wider in high and medium education families (having any extracurricular activity, dancing, gymnastics, horse riding, sports initiation), while gaps in uptake of activities at home by child sex are wider in low education families (painting/drawing/colouring, singing/listening to music, remembering parts of story books). In the UK, child gender gaps in children's activities are widest in the lower education group, specifically for painting/drawing and singing songs (which girls do more of), and for playing physically (which boys do more of).
+		
+		Findings about role modelling--the most comparable dimension across countries given the survey questions--suggest that, compared with mothers in France, a higher proportion of mothers in the UK are most responsible for house chores and for child care. The biggest differences I find across countries are related to cleaning the house (mothers are most responsible for that in 60.2\% of families in France, versus 75.7\% in the UK), preparing meals (57.9\% in France, 66\% in the UK) and getting up during the night (73.2\% in France, 64.7\% in the UK). There are also slightly more differences by education level in the UK than in France, and there's a difference by child sex for changing nappies in the UK, while there aren't any differences by child sex in France. These country differences could be explained by mothers being more available in the UK because of more part-time employment.
+		
+		I don't compare across countries for the other domains, given that the survey questions were too different, but I note that in both countries, there are child sex and education differences in terms of children's access to activities and resources and of mothers' expectations and attitudes, irrespective of the institutional background. Furthermore, in both countries, social success and being well liked are rated as more important by mothers of boys than by mothers of girls, and girls get more access to activities and resources than boys.
+		
+		The primary goal of this thesis was to document differences in parenting by child sex, social class and their interaction. Although my findings underscore that some differences exist by gender and by social class (but not by their interaction, i.e. the magnitude of gender differences are similar across social groups), my analyses don't explore the mechanisms that link child sex, social class, and parenting. Child sex could have a causal impact on parenting because of child characteristics that lead parents to treat boys and girls differently, either because of inherent gender differences, or because children's behaviour could be shaped by factors outside of parents. However, this mechanism should be limited in my analyses as I focus on early childhood, when parents have the strongest influence. Alternatively, parents might deem they need to foster different skills in boys and girls to insure their child's success in different fields of life (personal, professional, social). However, irrespective of social class or of child gender, parents' perception of what skills they need to foster in children could be informed and shaped by other factors in the family's environment, for example by messages conveyed by media, by perceptions, expectations and advice of family members, friends, teachers, doctors, colleagues, or by policies (e.g., maternity/paternity leave) and the economic context (e.g., higher job instability for women, wage inequalities). Lastly, though in my analyses I exclude differences related to parents' work status, maternity/paternity leave uptake, and having two parents at home, other factors related social class can still shape parenting by defining what resources parents can use in their child's rearing, both in terms of time and income. Further research is needed to better understand why parents of boys and parents of girls, as well as parents from different social backgrounds, make differences in the rearing of their children.
+		
+		Another limitation in these analyses is that, though MCS and Elfe include a lot of information on parenting practices in early childhood so that I can go into details, only one parent (mostly mothers) was asked the survey questions I used in my analyses. To better understand how fathers get involved with their children, and how parents share the time spent with their child, studies need to collect information from both parents on their own respective practices.
+		
+		Though I include evidence for both France and the UK, it was beyond the scope of this study to provide comparative evidence, mainly because of data limitations. Indeed, the questions were too different to directly compare results across countries, though I chose the parenting variables from each dataset that maximised the comparability. More generally, other variables could be used to describe parents' expectations and attitudes, their role modelling and behaviour, and children’s access and exposure.
+		
+		This study provides nationally representative evidence for two countries, France and the UK, that mothers still do most of the labour in the home, and that boys and girls before age 5 get different treatment on some aspects of parents' expectations and of access and exposure to family resources, irrespective of social class. I believe that in order to better understand the construction of gendered beliefs and self-concepts, it is important to better understand why these differences happen.
+		
+		
+		\newpage
+		
+		\begingroup
+		\bibliographystyle{abbrvnat}
+		\bibliography{/Users/alexsheridan/Documents/Work/PhD/latex/biblio.bib}
+		\endgroup
+		
+		
+		\newpage
+		
+		\section*{Appendix} \label{onlineappendix}
+		
+		\subsection*{Online Appendix}
+		
+		To access the Online Appendix, run the following code on R:\\
+		\verb|shiny::runGitHub("EDSD_project", "alextranslatus", subdir = "app")|
+		
+		\subsection*{Printed Appendix}
+		
+		\renewcommand{\thetable}{A\arabic{table}}
+		\setcounter{table}{0} 
+		
+		\renewcommand{\thefigure}{A\arabic{figure}}
+		\setcounter{figure}{0} 
+		
+		
+		\begin{table}[htbp]
+			\centering
+			\caption{Distribution of covariates at baseline before imputation using the weighted sample: Percentages}
+			\label{tab:table1beforeimp}
+			\resizebox{\textwidth}{!}{
+				\begin{tabular}{lcccc}
+					\hline
+					\textbf{Variable} 
+					& \makecell{\textbf{France} \\ N = 11,214} 
+					& \makecell{\textbf{Missings} \\ (N)} 
+					& \makecell{\textbf{UK} \\ N = 14,133} 
+					& \makecell{\textbf{Missings} \\ (N)} \\
+					\hline
+					\multicolumn{5}{l}{\textit{Parents' work status}} \\
+					Both parents        & 65.7 & 288  & 44.6 & 1 \\
+					Father only         & 24.4 &    & 32.1 &  \\
+					Mother only         & 5.1  &    & 5.7 &  \\
+					Neither           & 4.8  &    & 17.6 &  \\
+					
+					\multicolumn{5}{l}{\textit{M/paternity leave uptake}} \\
+					Both parents        & 68.3 & 154  & 31.8 & 3,705 \\
+					Father only         & 2.2  &    & 14.1 &    \\
+					Mother only         & 26.9 &    & 28.9 &    \\
+					Neither           & 2.6  &    & 25.1 &    \\
+					
+					\multicolumn{3}{l}{\textit{Two parents}} \\
+					Yes             & 94.3 & 164  & 84.6 & 0 \\
+					
+					\hline
+					\multicolumn{3}{l}{\footnotesize $^1$ Baseline is 2 months old for France, and 9 months old for the UK} \\
+			\end{tabular}}
+		\end{table}
+		
+		\newpage
+		
+		
+		\begin{figure}[p]
+			\centering
+			\caption{Unadjusted predicted values for mothers' expectations and attitudes variables, by mother's education and child sex (Model 3 estimates)}
+			\vspace{-3mm}
+			\noindent\includegraphics[width=\textwidth]{/Users/alexsheridan/Documents/Work/PhD/latex/figures/model3a.png}
+			\label{fig:model3a}
+		\end{figure}
+		
+		\begin{figure}[p]
+			\centering
+			\caption{Unadjusted predicted values for parents' role modelling variables, by mother's education and child sex (Model 3 estimates)}
+			\vspace{-3mm}
+			\noindent\includegraphics[width=\textwidth]{/Users/alexsheridan/Documents/Work/PhD/latex/figures/model3b.png}
+			\label{fig:model3b}
+		\end{figure}
+		
+		\begin{figure}[p]
+			\centering
+			\caption{Unadjusted predicted values for children’s access and exposure to family resources variables, by mother's education and child sex (Model 3 estimates)}
+			\vspace{-3mm}
+			\noindent\includegraphics[width=\textwidth]{/Users/alexsheridan/Documents/Work/PhD/latex/figures/model3c.png}
+			\label{fig:model3c}
+		\end{figure}
+		
+		% \begin{sidewaystable}[!t]
+			%  \caption{Linear regression results for France: Parents' role modelling} 
+			%  \label{} 
+			%  \resizebox{\textwidth}{!}{
+				% }
+			% \end{sidewaystable}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	\end{document}

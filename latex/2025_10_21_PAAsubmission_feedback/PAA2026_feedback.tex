@@ -1,0 +1,192 @@
+\documentclass[11pt]{article}
+\usepackage[english]{babel}
+\usepackage[top=.8in, bottom=1in, left=1.3in, right=1.3in]{geometry}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage{filecontents}
+\usepackage{verbatim}
+\usepackage{textcomp}
+\usepackage{multirow}
+\usepackage{eurosym}
+\usepackage{array}
+\usepackage[export]{adjustbox}
+\usepackage{dcolumn}
+\usepackage{array}
+\usepackage[authoryear,round]{natbib}
+\renewcommand{\bibsection}{}
+\bibliographystyle{abbrvnat}
+\usepackage{lscape}
+\usepackage{rotating}
+\makeatletter
+\newcommand{\ssymbol}[1]{^{\@fnsymbol{#1}}}
+\makeatother
+\usepackage[flushleft]{threeparttable}
+\usepackage{setspace}
+\usepackage{caption}
+\usepackage{helvet}
+\usepackage{float}
+\usepackage{subcaption} % Optional: to customize float page (e.g. remove page number)
+\usepackage{placeins}
+\usepackage[hidelinks]{hyperref}
+\usepackage{bibentry}
+\nobibliography{biblio}
+\usepackage{rotating}
+\usepackage{booktabs}
+\usepackage{makecell}
+\usepackage{titlesec}
+\usepackage{soul}
+\usepackage{xcolor}
+
+\sethlcolor{lime}
+\newcommand{\hlyes}[1]{{\sethlcolor{lime}\hl{#1}}}
+\newcommand{\hlno}[1]{{\sethlcolor{pink}\hl{#1}}}
+\newcommand{\hlmaybe}[1]{{\sethlcolor{yellow}\hl{#1}}}
+
+
+\titleformat{\section}
+{\fontsize{16}{18}\bfseries\sffamily}
+{\thesection}{1em}{}
+
+\titleformat{\subsection}
+{\fontsize{14}{18}\bfseries\sffamily}
+{\thesubsection}{1em}{}
+
+\titleformat{\subsubsection}
+{\fontsize{13}{18}\bfseries\sffamily}
+{\thesubsubsection}{1em}{}
+
+\titleformat{\subsubsubsection}
+{\fontsize{11}{18}\bfseries\sffamily\itshape}
+{\thesubsubsubsection}{1em}{}
+
+
+\title{Feedback from the CRIS doctoral workshop on PAA submission}
+\date{October 2025}
+
+\begin{document}
+	
+	\maketitle
+
+
+
+\section{What's my paper about? What's its contribution?}
+
+\begin{itemize}
+	\item I need to narrow down the paper.
+	\item A comparative analysis needs to be motivated by differences across countries. For example, tracking was different in each country, so we compared the development of inequalities across the different countries. If I want to keep both countries, I need to argue they're different enough, push the comparaison throughout the paper.
+	\item If I focus on only one country, focusing on France could be interesting because it's the most interventionist/familialistic of the two (with more systematic parental/maternity/paternity leave, maternelle), so if we find differences between boys and girls in France, it's likely to be worse in the UK and elsewhere.
+	\item Another possibility, is keep both contries, argue they're similar enough I can pool into a larger sample.
+	\item If I include the three dimensions of parenting, need to have a discussion of how they interact. And then need to warn readers starting in the title that it's a multiple outcome study, and then need really good visualisation. Should also consider dropping a country if I keep all dimensions and variables. Right now, each dimension is itself a multiple outcome study. In the context of a thesis, I could make the dimensions talk to each other from different chapters, see Zachary's thesis for an analogous format (where do I find it?).
+	\item Reemphasize we're looking at child's gender, which you could argue is an exogenous treatment if you restrict the sample to one child per family? Then you'd have to go through the assumptions needed to support that exogeneity claim. Compare parents of boys and girls. See \cite{legewie2013terrorist} for an example of that.
+	\item Other route: focus on a couple of variables, for example, counting and reading, to make a statement about gender gaps starting in infancy.
+	\item Check out papers by \cite{leopold2025web} for papers that have succinct theory and good visualisation.
+\end{itemize}
+
+
+\section{Which journal?}
+
+\begin{itemize}
+	\item Sociology rather than demography.
+	\item Social Forces: interested in parenting, for a broader paper.
+	\item Journal of Marriage and Family
+	\item European Sociological Review
+	\item Gender and Society
+	\item Social Problems
+\end{itemize}
+	
+\section{More generally}
+
+\begin{itemize}
+	\item Mirror the structure throughout, for example around the three research questions.
+	\item If I'm looking at education, say that's what I'm doing, rather than say I'm looking at social class. If I look at social class, I need to include things like occupation. There's probably been more literature on parenting and social class than on parenting and education.
+	\item Include the word “intersectional": and point out that it's interesting we don't find much of an interaction between gender and social class.
+	\item My sentences are too long. Try more “caveman sentences".
+\end{itemize}
+
+
+
+\section{Title}
+
+\begin{itemize}
+	\item Right now the title is boring: it's good, helps avoid a desk reject. But you still need to sell the contribution (once you find what it is).
+	\item And right now, title foreshadows that I need to narrow down the paper.
+\end{itemize}
+
+
+\section{Abstract}
+
+\begin{itemize}
+	\item  “which might suggest that parents compensate for persisting gendered discrimination in society": ok for PAA, but will raise reviewers' hackles. Plus, parents might be spending more time with girls to structure them more, reinforcing gender differences (see constructivist sociology).
+	\item No shit sentences:  “parenting is both gendered and stratified by social class, and that some gender gaps vary by social class". Make it more precise, add numbers/findings.
+	\item One sentence for RQs, one sentence for data and methods.
+	\item Squeeze in  “need for more research".
+	\item Reemphasize gender by social class, and that it's interesting that we get null results, when you could think of reasons there'd be differences.
+\end{itemize}
+
+
+
+\section{Introduction}
+
+\begin{itemize}
+	\item Forcing myself to start my paper by the word ‘parenting'. Right now, I'm losing readers, they're not sure what my focus is. Start with parenting, then say why it matters for children's outcomes.
+	\item RQs: less yes or no, try to make them more interesting, even just by adding “to what extent". And put them into separate paragraphs. “This is what the literature says, so I ask this. But also these other dudes say this, so I ask this too".
+	\item At the end of the intro, add a paragraph reporting what results I have, and what the implications could be.
+	\item Spell out what parenting is much earlier.
+	\item Include an outline if I choose a broader paper.
+	\item Theory: challenge the rational organisation of the family, rational choice theory: we should expect bigger gaps. Or maybe just question the theory by digging into the role of contextual elements.
+	\item Theory: don't forget social class.
+	\item Theory: cultural sociology, dual process theory.
+	\item Mention of Kevin Dieter for some reason.
+	\item No need to cite Durkheim anymore and avoid Esping Andersen (btw, France not social democratic)
+	\item See \cite{desmond2012disposable} for an example of theory section.
+\end{itemize}
+
+\section{Data, methods}
+
+\begin{itemize}
+	\item Right now it's detailed: that's good.
+	\item Clarify samples.
+	\item Use font differences.
+	\item Attrition paragragh is too much, leave it for the appendix.
+	\item Include siblings, parents' age as controls.
+	\item Maternal leave: mediator?
+\end{itemize}
+
+
+
+\section{Results}
+
+\begin{itemize}
+	\item Limit to 5 figures/tables.
+	\item Change the variable names.
+	\item Mirror the research questions: what elements support the hypotheses or not.
+	\item Sensitivy analyses: see \cite{cinelli2020making}.
+\end{itemize}
+
+
+
+
+
+\section{Discussion}
+
+\begin{itemize}
+	\item Does this speak to other sociologists? (\cite{goncalves2024book}?)
+	\item More discussion in conversation with previous findings.
+	\item Can't bring a new idea out of nowhere.
+	\item “given that the activities I include in this study shouldn’t be too costly to implement (e.g., physical play, singing songs, painting, listening to music)": didn't read as it should have.
+	\item Quantify the results, for example in standard deviations, or in percentage of a year of education, to give an idea of the size of the effect.
+\end{itemize}
+
+\newpage 
+
+\section{References}
+\begingroup
+\bibliographystyle{abbrvnat}
+\bibliography{/Users/alexsheridan/Documents/Work/PhD/latex/biblio.bib}
+\endgroup
+
+\end{document}
