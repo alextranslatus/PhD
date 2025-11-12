@@ -2,11 +2,11 @@ This is BibTeX, Version 0.99d (TeX Live 2025)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: literature.aux
 The style file: abbrvnat.bst
-Illegal, another \bibstyle command---line 283 of file literature.aux
+Illegal, another \bibstyle command---line 279 of file literature.aux
  : \bibstyle
  :          {abbrvnat}
 I'm skipping whatever remains of this command
-Reallocated field_info (elt_size=4) to 11580 items from 5000.
+Reallocated field_info (elt_size=4) to 11468 items from 5000.
 Database file #1: /Users/alexsheridan/Documents/Work/PhD/latex/biblio.bib
 Repeated entry---line 2799 of file /Users/alexsheridan/Documents/Work/PhD/latex/biblio.bib
  : @article{frejkaTwoPartGenderRevolution2018
@@ -30,45 +30,45 @@ Warning--empty journal in frejkaTwoPartGenderRevolution2018
 Warning--empty publisher in west1991
 Warning--empty year in west1991
 Warning--empty year in west1991
-You've used 233 entries,
+You've used 229 entries,
             2773 wiz_defined-function locations,
-            1901 strings with 44087 characters,
-and the built_in function-call counts, 105764 in all, are:
-= -- 9875
-> -- 5167
-< -- 187
-+ -- 1771
-- -- 1536
-* -- 8322
-:= -- 16318
-add.period$ -- 830
-call.type$ -- 233
-change.case$ -- 1161
-chr.to.int$ -- 231
-cite$ -- 470
-duplicate$ -- 4989
-empty$ -- 9124
-format.name$ -- 1915
-if$ -- 22240
+            1881 strings with 43382 characters,
+and the built_in function-call counts, 103867 in all, are:
+= -- 9707
+> -- 5049
+< -- 186
++ -- 1731
+- -- 1500
+* -- 8151
+:= -- 16019
+add.period$ -- 816
+call.type$ -- 229
+change.case$ -- 1138
+chr.to.int$ -- 227
+cite$ -- 462
+duplicate$ -- 4906
+empty$ -- 8974
+format.name$ -- 1875
+if$ -- 21852
 int.to.chr$ -- 3
 int.to.str$ -- 1
-missing$ -- 270
-newline$ -- 1282
-num.names$ -- 978
-pop$ -- 2181
+missing$ -- 265
+newline$ -- 1260
+num.names$ -- 962
+pop$ -- 2138
 preamble$ -- 1
-purify$ -- 965
+purify$ -- 945
 quote$ -- 0
-skip$ -- 3615
+skip$ -- 3556
 stack$ -- 0
-substring$ -- 4908
-swap$ -- 415
+substring$ -- 4840
+swap$ -- 411
 text.length$ -- 24
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 2358
+type$ -- 2319
 warning$ -- 4
-while$ -- 1100
+while$ -- 1082
 width$ -- 0
-write$ -- 3290
+write$ -- 3234
 (There were 5 error messages)
