@@ -3,7 +3,7 @@
 \contentsline {section}{\numberline {2}Literature overviews: meta-analyses, systematic reviews, perspectives}{5}{section.2}%
 \contentsline {subsection}{\numberline {2.1}The effects of gendered parenting on child development outcomes: A systematic review \citep {morawska_effects_2020}}{5}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Parents' differential socialization of boys and girls: A meta-analysis. \citep {lytton_parents_1991}}{7}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Gendered Parenting in Early Childhood: Subtle But Unmistakable if You Know Where to Look \citep {mesman_gendered_2018}}{7}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.3}Gendered Parenting in Early Childhood: Subtle But Unmistakable if You Know Where to Look \citep {mesman_gendered_2018}}{8}{subsection.2.3}%
 \contentsline {section}{\numberline {3}Theory}{11}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Doing gender \citep {west1987doing}}{11}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Social–cognitive theory of gender development and differentiation \citep {bussey_social_1999}}{11}{subsection.3.2}%
@@ -12,9 +12,9 @@
 \contentsline {subsection}{\numberline {4.2}Equal sharing or not at all caring? Ideals about fathers’ family involvement and the prevalence of the second half of the gender revolution in 27 societies \citep {edlund2023equal}}{18}{subsection.4.2}%
 \contentsline {section}{\numberline {5}Empirical findings}{22}{section.5}%
 \contentsline {subsection}{\numberline {5.1}A comparison of observed and reported adult-infant interactions: Effects of perceived sex \citep {culp1983comparison}}{22}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Parenting and children's externalizing behavior: Bidirectionality during toddlerhood \citep {verhoeven_parenting_2010}}{22}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Gender Stereotypes in the Family Context: Mothers, Fathers, and Siblings \citep {endendijk2013}}{23}{subsection.5.3}%
-\contentsline {subsection}{\numberline {5.4}Social class, gender, and contemporary parenting standards in the United States: Evidence from a national survey experiment \citep {ishizuka2019social}}{26}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.2}Parenting and children's externalizing behavior: Bidirectionality during toddlerhood \citep {verhoeven_parenting_2010}}{23}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Gender Stereotypes in the Family Context: Mothers, Fathers, and Siblings \citep {endendijk2013}}{24}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Social class, gender, and contemporary parenting standards in the United States: Evidence from a national survey experiment \citep {ishizuka2019social}}{27}{subsection.5.4}%
 \contentsline {subsection}{\numberline {5.5}Maternal Influences on Daughters' Gender Role Attitudes \citep {jan1998maternal}}{32}{subsection.5.5}%
 \contentsline {subsection}{\numberline {5.6}“No Way My Boys Are Going to Be Like That!”: Parents’ Responses to Children’s Gender Nonconformity \citep {kane2006no}}{33}{subsection.5.6}%
 \contentsline {section}{\numberline {6}References}{37}{section.6}%
